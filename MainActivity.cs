@@ -1,5 +1,6 @@
 ﻿using Android.App;
 using Android.Content;
+using Android.Database.Sqlite;
 using Android.OS;
 using Android.Runtime;
 using AndroidX.AppCompat.App;
@@ -13,6 +14,9 @@ namespace Final_Project
         {
             base.OnCreate(savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
+
+            SQLiteOpenHelper database_helper = new Database(this);
+            Database.database = database_helper.ReadableDatabase;
 
             //Immediately default to general calculator
             Intent intent = new Intent(this, typeof(GeneralActivity));

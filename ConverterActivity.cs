@@ -24,26 +24,12 @@ namespace Final_Project
 
             Button general_button = FindViewById<Button>(Resource.Id.general_button);
             Button converter_button = FindViewById<Button>(Resource.Id.converter_button);
-            Button programmer_button = FindViewById<Button>(Resource.Id.programmer_button);
             Button history_button = FindViewById<Button>(Resource.Id.history_button);
 
             //Change to general activity
             general_button.Click += delegate
             {
                 Intent intent = new Intent(this, typeof(GeneralActivity));
-                StartActivity(intent);
-            };
-
-            //Change to converter activity
-            converter_button.Click += delegate
-            {
-                
-            };
-
-            //Change to programmer activity
-            programmer_button.Click += delegate
-            {
-                Intent intent = new Intent(this, typeof(ProgrammerActivity));
                 StartActivity(intent);
             };
 

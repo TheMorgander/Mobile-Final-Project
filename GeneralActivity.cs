@@ -2,13 +2,8 @@
 using Android.Content;
 using Android.OS;
 using Android.Runtime;
-using Android.Views;
 using Android.Widget;
 using AndroidX.AppCompat.App;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Final_Project
 {
@@ -30,10 +25,10 @@ namespace Final_Project
 
             Button general_button = FindViewById<Button>(Resource.Id.general_button);
             Button converter_button = FindViewById<Button>(Resource.Id.converter_button);
-            Button programmer_button = FindViewById<Button>(Resource.Id.programmer_button);
             Button history_button = FindViewById<Button>(Resource.Id.history_button);
 
             EditText text_result = FindViewById<EditText>(Resource.Id.result_text);
+            text_result.Text = "0";
 
             Button button_1 = FindViewById<Button>(Resource.Id.button_1);
             Button button_2 = FindViewById<Button>(Resource.Id.button_2);
@@ -57,23 +52,10 @@ namespace Final_Project
             Button button_clear = FindViewById<Button>(Resource.Id.button_clear);
 
 
-            //Change to general activity
-            general_button.Click += delegate
-            {
-               
-            };
-
             //Change to converter activity
             converter_button.Click += delegate
             {
                 Intent intent = new Intent(this, typeof(ConverterActivity));
-                StartActivity(intent);
-            };
-
-            //Change to programmer activity
-            programmer_button.Click += delegate
-            {
-                Intent intent = new Intent(this, typeof(ProgrammerActivity));
                 StartActivity(intent);
             };
 
@@ -212,6 +194,10 @@ namespace Final_Project
                             break;
                         }
                 }
+
+                string operation_entry = operand_1 + operation + operand_2;
+                string result_entry = result.ToString();
+                Database.InsertOperation(Database.database, operation_entry, result_entry);
             };
 
             button_clear.Click += delegate

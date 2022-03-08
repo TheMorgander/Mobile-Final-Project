@@ -21,12 +21,22 @@ namespace Final_Project
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.history_activity);
+
+            ListView history_list = FindViewById<ListView>(Resource.Id.history_listview);
+            IList<HistoryEntry> history = Database.RetreiveOperations();
+            history_list.Adapter = new HistoryBaseAdapter(this, history);
+
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
+
+        public void PopulateList(ListView list)
+        {
+
         }
     }
 }
