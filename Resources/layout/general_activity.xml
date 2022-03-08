@@ -28,15 +28,167 @@
 
     </GridLayout>
 
-    <GridLayout
+    <EditText
+        android:id="@+id/result_text"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_margin="10dp" />
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rowCount="5"
+        android:columnCount="4"
+        android:layout_gravity="center_horizontal">
+        <Button
+            android:text="1"
+            android:minWidth="50px"
+            android:minHeight="50px"
+            android:id="@+id/button_1"
+            android:layout_margin="10dp"
+            android:width="60dp"
+            android:height="60dp" />
+        <Button
+            android:text="2"
+            android:minWidth="50px"
+            android:minHeight="50px"
+            android:id="@+id/button_2"
+            android:layout_margin="10dp"
+            android:width="60dp"
+            android:height="60dp" />
+        <Button
+            android:text="3"
+            android:minWidth="50px"
+            android:minHeight="50px"
+            android:id="@+id/button_3"
+            android:layout_margin="10dp"
+            android:width="60dp"
+            android:height="60dp" />
+        <Button
+            android:text="/"
+            android:minWidth="50px"
+            android:minHeight="50px"
+            android:id="@+id/button_division"
+            android:layout_margin="10dp"
+            android:width="60dp"
+            android:height="60dp"
+            android:layout_marginLeft="40dp" />
+
+        <Button
+            android:text="4"
+            android:minWidth="50px"
+            android:minHeight="50px"
+            android:id="@+id/button_4"
+            android:layout_margin="10dp"
+            android:width="60dp"
+            android:height="60dp" />
+        <Button
+            android:text="5"
+            android:minWidth="50px"
+            android:minHeight="50px"
+            android:id="@+id/button_5"
+            android:layout_margin="10dp"
+            android:width="60dp"
+            android:height="60dp" />
+        <Button
+            android:text="6"
+            android:minWidth="50px"
+            android:minHeight="50px"
+            android:id="@+id/button_6"
+            android:layout_margin="10dp"
+            android:width="60dp"
+            android:height="60dp" />
+        <Button
+            android:text="*"
+            android:minWidth="50px"
+            android:minHeight="50px"
+            android:id="@+id/button_multiplication"
+            android:layout_margin="10dp"
+            android:width="60dp"
+            android:height="60dp"
+            android:layout_marginLeft="40dp" />
+
+        <Button
+            android:text="7"
+            android:minWidth="50px"
+            android:minHeight="50px"
+            android:id="@+id/button_7"
+            android:layout_margin="10dp"
+            android:width="60dp"
+            android:height="60dp" />
+        <Button
+            android:text="8"
+            android:minWidth="50px"
+            android:minHeight="50px"
+            android:id="@+id/button_8"
+            android:layout_margin="10dp"
+            android:width="60dp"
+            android:height="60dp" />
+        <Button
+            android:text="9"
+            android:minWidth="50px"
+            android:minHeight="50px"
+            android:id="@+id/button_9"
+            android:layout_margin="10dp"
+            android:width="60dp"
+            android:height="60dp" />
+        <Button
+            android:text="+"
+            android:minWidth="50px"
+            android:minHeight="50px"
+            android:id="@+id/button_addition"
+            android:layout_margin="10dp"
+            android:width="60dp"
+            android:height="60dp"
+            android:layout_marginLeft="40dp" />
+
+        <Button
+            android:text="0"
+            android:minWidth="50px"
+            android:minHeight="50px"
+            android:id="@+id/button_0"
+            android:layout_margin="10dp"
+            android:width="60dp"
+            android:height="60dp" />
+        <Button
+            android:text="."
+            android:minWidth="50px"
+            android:minHeight="50px"
+            android:id="@+id/button_decimal"
+            android:layout_margin="10dp"
+            android:width="60dp"
+            android:height="60dp" />
+        <Button
+            android:text="C"
+            android:minWidth="50px"
+            android:minHeight="50px"
+            android:id="@+id/button_clear"
+            android:layout_margin="10dp"
+            android:width="60dp"
+            android:height="60dp" />
+        <Button
+            android:text="-"
+            android:minWidth="50px"
+            android:minHeight="50px"
+            android:id="@+id/button_subtraction"
+            android:layout_margin="10dp"
+            android:width="60dp"
+            android:height="60dp"
+            android:layout_marginLeft="40dp" />
+
+        <Button
+            android:text="="
+            android:id="@+id/button_equals"
+            android:layout_margin="10dp"
+            android:width="330dp"
+            android:height="60dp"
+            android:layout_columnSpan="4" />
     </GridLayout>
 
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="bottom">
+        android:gravity="bottom"
+        android:layout_gravity="bottom">
         <Button
             android:text="History"
             android:layout_width="match_parent"
