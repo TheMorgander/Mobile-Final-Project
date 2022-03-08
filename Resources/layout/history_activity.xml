@@ -1,21 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<GridLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:p4="http://xamarin.com/mono/android/designer"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <ListView
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:rowCount="2"
+    android:columnCount="1">
+    <GridLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/gridLayout1">
+        <ListView
             android:minWidth="25px"
             android:minHeight="25px"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="500dp"
             android:id="@+id/history_listview" />
-    <Button
-        android:text="Clear History"
+    </GridLayout>
+
+    
+    <GridLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/clear_history_button"
-        android:foregroundGravity="bottom" />
+        android:gravity="bottom"
+        android:layout_gravity="bottom">
+        <Button
+            android:text="Clear History"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:id="@+id/clear_history_button"
+            android:layout_margin="10dp" />
+    </GridLayout>
     
-</RelativeLayout>
+</GridLayout>

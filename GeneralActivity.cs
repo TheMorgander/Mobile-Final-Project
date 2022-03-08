@@ -1,9 +1,11 @@
 ﻿using Android.App;
-using Android.Content;
 using Android.OS;
 using Android.Runtime;
-using Android.Widget;
 using AndroidX.AppCompat.App;
+using Android.Widget;
+using Android.Util;
+using Android.Content;
+using System.Collections.Generic;
 
 namespace Final_Project
 {
@@ -51,6 +53,15 @@ namespace Final_Project
 
             Button button_clear = FindViewById<Button>(Resource.Id.button_clear);
 
+            if (savedInstanceState != null)
+            {
+                input = savedInstanceState.GetString("input");
+                operand_1 = savedInstanceState.GetString("operand_1");
+                operand_2 = savedInstanceState.GetString("operand_2");
+                operation = savedInstanceState.GetString("operation");
+                result = savedInstanceState.GetDouble("result");
+                text_result.Text = input;
+            }
 
             //Change to converter activity
             converter_button.Click += delegate
@@ -195,6 +206,7 @@ namespace Final_Project
                         }
                 }
 
+                Log.Debug("GeneralActivity", "General Operation Performed: " + operand_1 + operation + operand_2 + "=" + result.ToString());
                 string operation_entry = operand_1 + operation + operand_2;
                 string result_entry = result.ToString();
                 Database.InsertOperation(Database.database, operation_entry, result_entry);
@@ -210,6 +222,17 @@ namespace Final_Project
             };
 
         }
+
+        protected override void OnSaveInstanceState(Bundle outState)
+        {
+            base.OnSaveInstanceState(outState);
+            outState.PutString("input", input);
+            outState.PutString("operand_1", operand_1);
+            outState.PutString("operand_2", operand_2);
+            outState.PutString("operation", operation);
+            outState.PutDouble("result", result);
+        }
+
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
