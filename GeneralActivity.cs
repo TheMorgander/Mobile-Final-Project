@@ -9,7 +9,7 @@ using System.Collections.Generic;
 
 namespace Final_Project
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme")]
+    [Activity(Label = "General Calculator", Theme = "@style/AppTheme")]
     public class GeneralActivity : AppCompatActivity
     {
         public string input;

@@ -13,7 +13,7 @@ using System.Text;
 
 namespace Final_Project
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme")]
+    [Activity(Label = "Conversions", Theme = "@style/AppTheme")]
     public class ConverterActivity : AppCompatActivity
     {
         protected string from_units;

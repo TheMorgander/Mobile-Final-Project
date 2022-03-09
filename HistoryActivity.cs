@@ -12,7 +12,7 @@ using System.Text;
 
 namespace Final_Project
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme")]
+    [Activity(Label = "History", Theme = "@style/AppTheme")]
     public class HistoryActivity : AppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
