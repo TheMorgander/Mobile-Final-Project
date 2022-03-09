@@ -31,7 +31,7 @@
         android:layout_margin="10dp" />
 
     <EditText
-        android:id="@+id/result_text"
+        android:id="@+id/input_text"
         android:layout_width="match_parent"
         android:layout_margin="10dp" />
 
@@ -42,7 +42,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_margin="10dp" />
     <Spinner
-        android:id="@+id/from_type"
+        android:id="@+id/from_spinner"
         android:layout_width="match_parent"
         android:contentDescription="Pick From Units"
         android:layout_margin="10dp"/>
@@ -54,7 +54,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_margin="10dp" />
     <Spinner
-        android:id="@+id/to_type"
+        android:id="@+id/to_spinner"
         android:layout_width="match_parent"
         android:contentDescription="Pick To Units" 
         android:layout_margin="10dp"/>
@@ -66,10 +66,19 @@
         android:layout_gravity="center_horizontal"
         android:layout_margin="10dp" />
     <EditText
-        android:id="@+id/result_value"
+        android:id="@+id/output_text"
         android:layout_width="match_parent"
         android:layout_margin="10dp"
         android:clickable="false" />
+
+    <Button
+            android:text="Convert"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:id="@+id/conversion_button"
+            android:layout_margin="10dp" />
 
 
     <GridLayout

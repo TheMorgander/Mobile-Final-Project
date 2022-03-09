@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">Final_Project</string>
     <string name="action_settings">Settings</string>
+  <string-array name="from_array">
+    <item>Miles</item>
+    <item>Kilometers</item>
+  </string-array>
+  <string-array name="to_array">
+    <item>Miles</item>
+    <item>Kilometers</item>
+  </string-array>
 </resources>

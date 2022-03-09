@@ -25,13 +25,11 @@ namespace Final_Project
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.general_activity);
 
+            //Data pointing to layout elements
             Button general_button = FindViewById<Button>(Resource.Id.general_button);
             Button converter_button = FindViewById<Button>(Resource.Id.converter_button);
             Button history_button = FindViewById<Button>(Resource.Id.history_button);
-
             EditText text_result = FindViewById<EditText>(Resource.Id.result_text);
-            text_result.Text = "0";
-
             Button button_1 = FindViewById<Button>(Resource.Id.button_1);
             Button button_2 = FindViewById<Button>(Resource.Id.button_2);
             Button button_3 = FindViewById<Button>(Resource.Id.button_3);
@@ -42,17 +40,18 @@ namespace Final_Project
             Button button_8 = FindViewById<Button>(Resource.Id.button_8);
             Button button_9 = FindViewById<Button>(Resource.Id.button_9);
             Button button_0 = FindViewById<Button>(Resource.Id.button_0);
-
             Button button_decimal = FindViewById<Button>(Resource.Id.button_decimal);
-
             Button button_addition = FindViewById<Button>(Resource.Id.button_addition);
             Button button_subtraction = FindViewById<Button>(Resource.Id.button_subtraction);
             Button button_multiplication = FindViewById<Button>(Resource.Id.button_multiplication);
             Button button_division = FindViewById<Button>(Resource.Id.button_division);
             Button button_equals = FindViewById<Button>(Resource.Id.button_equals);
-
             Button button_clear = FindViewById<Button>(Resource.Id.button_clear);
 
+            //Set display field to show 0
+            text_result.Text = "0";
+
+            //Restore saved data on screen rotate
             if (savedInstanceState != null)
             {
                 input = savedInstanceState.GetString("input");
@@ -128,13 +127,11 @@ namespace Final_Project
                 input += "0";
                 text_result.Text = input;
             };
-
             button_decimal.Click += delegate
             {
                 input += ".";
                 text_result.Text = input;
             };
-
             button_addition.Click += delegate
             {
                 operand_1 = input;
@@ -200,18 +197,19 @@ namespace Final_Project
                             }
                             else
                             {
-                                text_result.Text = "You are stupid";
+                                text_result.Text = "Divide by 0 Error";
                             }
                             break;
                         }
                 }
 
                 Log.Debug("GeneralActivity", "General Operation Performed: " + operand_1 + operation + operand_2 + "=" + result.ToString());
+                
                 string operation_entry = operand_1 + operation + operand_2;
                 string result_entry = result.ToString();
+                
                 Database.InsertOperation(Database.database, operation_entry, result_entry);
             };
-
             button_clear.Click += delegate
             {
                 operand_1 = string.Empty;
@@ -220,9 +218,9 @@ namespace Final_Project
                 input = string.Empty;
                 text_result.Text = "0";
             };
-
         }
 
+        //Save data on screen rotate
         protected override void OnSaveInstanceState(Bundle outState)
         {
             base.OnSaveInstanceState(outState);

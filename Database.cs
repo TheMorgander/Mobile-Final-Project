@@ -30,7 +30,7 @@ namespace Final_Project
         public override void OnCreate(SQLiteDatabase db)
         {
             db.ExecSQL("CREATE TABLE OPERATIONS (_id INTEGER PRIMARY KEY AUTOINCREMENT," +
-                "OPERATION TEXT, RESULT TEXT);");
+            "OPERATION TEXT, RESULT TEXT);");
         }
 
         //OnUpgrade override
@@ -61,6 +61,11 @@ namespace Final_Project
             }
 
             return history_list;
+        }
+
+        public static void ClearHistory()
+        {
+            database.Delete("OPERATIONS", null, null);
         }
     }
 

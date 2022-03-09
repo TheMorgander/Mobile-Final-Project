@@ -15,6 +15,7 @@ namespace Final_Project
             base.OnCreate(savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
 
+            //Initalize history database
             SQLiteOpenHelper database_helper = new Database(this);
             Database.database = database_helper.ReadableDatabase;
 
