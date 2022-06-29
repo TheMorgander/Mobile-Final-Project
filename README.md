@@ -1,7 +1,10 @@
 # Mobile-Final-Project
-This is a final project for the CST407 Mobile Development technical elective at OregonTech.
+This is a final project for the CST407 Mobile Development technical elective at the Oregon Institute of Technology.
 
-This project is a calculator with standard operations, unit conversions, and storing of history.
+This is a C# Xamarin project for a calculator application. The calculator includes:
+* Standard Operations
+* Unit Conversions
+* Operation History
 
 ## Example 1 - General Calculator
 <p align="center">
