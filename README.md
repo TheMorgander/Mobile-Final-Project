@@ -1,4 +1,5 @@
 # Mobile-Final-Project
+## Overview
 This is a final project for the CST407 Mobile Development technical elective at the Oregon Institute of Technology.
 
 This is a C# Xamarin project for a calculator application. The calculator includes:
@@ -6,18 +7,13 @@ This is a C# Xamarin project for a calculator application. The calculator includ
 * Unit Conversions
 * Operation History
 
-## Example 1 - General Calculator
-<p align="center">
-  <img src="https://github.com/themorgander/Mobile-Final-Project/blob/main/Images/Example_1.png?raw=true"/>
-</p>
+## Example Images
+### Image 1: General Calculator
+<img src="https://github.com/themorgander/Mobile-Final-Project/blob/main/Images/Example_1.png?raw=true"/>
 
-## Example 2 - Conversion Calculator
-<p align="center">
-  <img src="https://github.com/themorgander/Mobile-Final-Project/blob/main/Images/Example_2.png?raw=true"/>
-</p>
+### Image 2: Conversion Calculator
+<img src="https://github.com/themorgander/Mobile-Final-Project/blob/main/Images/Example_2.png?raw=true"/>
 
-## Example 3 - History
-<p align="center">
-  <img src="https://github.com/themorgander/Mobile-Final-Project/blob/main/Images/Example_3.png?raw=true"/>
-</p>
+### Image 3: History
+<img src="https://github.com/themorgander/Mobile-Final-Project/blob/main/Images/Example_3.png?raw=true"/>
 
